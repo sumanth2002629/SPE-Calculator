@@ -86,10 +86,15 @@ public class Main {
     public static int div(int x, int y)
     {
         logger.info("START OP: Div");
-        if(y==0) logger.warn("Invalid Input");
+        if(y==0)
+        {
+            System.out.println("Invalid Input");
+            logger.warn("Invalid Input");
+        }
         else
         {
-            int z = x/y;
+            int z;
+            z = x / y;
             logger.info("END OP: Div");
             return z;
         }
